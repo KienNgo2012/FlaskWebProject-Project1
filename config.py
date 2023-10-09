@@ -6,7 +6,7 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'udacity1kien'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or '+ySkinG4WFcUQdfYavYdRhvJbAcsvFzEPja/budRtH8H8HCRTP/JXtv0qo9DxkQdwW2SOlGfNjWE+ASt+chmrw=='
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'a5uW5+itbHMtS90aSwaoseUMK2YCk1IpVKVDdLC/Asv/o4W4scqV/bZavLaBoMbMbr3o61LVS0WM+AStVxOawA=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'udacity-server-project1.database.windows.net'
