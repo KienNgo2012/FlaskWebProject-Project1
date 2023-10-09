@@ -76,11 +76,13 @@ def login():
             flash('Invalid username or password')
             # LOG Unsuccessful login
             LOG.warning('WARNING: Login Unsucessful....Invalid username or password for user:' + str(user))
+            print('WARNING: Login Unsucessful....Invalid username or password for user:' + str(user))
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('home')
+            print(str(user) + 'logged successfully')
         return redirect(next_page)
     session["state"] = str(uuid.uuid4())
     auth_url = _build_auth_url(scopes=Config.SCOPE, state=session["state"])
